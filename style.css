@@ -1,0 +1,116 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 1.3;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.quote-container {
+  width: auto;
+  max-width: 56.25rem;
+  padding: 1.875rem;
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(215, 215, 215, 0.6);
+  text-align: center;
+}
+
+.long-quote-text {
+  font-size: 2.1875rem;
+}
+.quote-text {
+  font-size: 2.7rem;
+  font-weight: 600;
+  text-align: start;
+}
+.fa-quote-left {
+  font-size: 4rem;
+}
+
+.fa-x-twitter {
+  font-size: 1.5rem;
+}
+
+.quote-author {
+  margin-top: 1.875rem;
+  font-size: 1.7rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.button-container {
+  margin-top: 1.875rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  cursor: pointer;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.125rem;
+  padding: 0.75rem 1.875rem;
+  background-color: #ff7300cc;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  box-shadow: 0 0.3rem #aa4b00;
+  transition: all ease-in 0.1s;
+}
+
+button:hover {
+  filter: brightness(1.1);
+}
+
+button:active {
+  transform: translate(0, 0.3rem);
+  box-shadow: 0 0.1rem rgb(111, 111, 111, 0.4);
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #ff7300cc;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* responsive designs: media queries */
+
+@media screen and (max-width: 64rem) {
+  .quote-container {
+    margin: auto 10px;
+  }
+
+  .quote-text {
+    font-size: 2.5rem;
+  }
+  .long-quote-text {
+    font-size: 1.6875rem;
+  }
+}
